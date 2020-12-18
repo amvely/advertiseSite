@@ -14,9 +14,9 @@ app.use(bodyParser.json());
 // 요청 객체의 body에 요청 파라미터 넣기
 
 var pool = mysql.createPool({
-	host:'nodejs-007.cafe24.com/WebMysql',
+	host:'10.0.0.1',
 	user:'louren205c',
-	password:'louren205!!',
+	password:'louren',
 	database:'louren205c',
 	port:'3306'
 });
