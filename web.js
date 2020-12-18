@@ -4,7 +4,7 @@ const express = require('express')
 , bodyParser = require('body-parser');
 
 const app = express();
-app.use(express.static('public')); 
+app.use(express.static(__dirname+'/public')); 
 // static으로 지정해서 해당 폴더를 root path로 설정
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
