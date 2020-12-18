@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>louren admin 페이지</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="wrap">
+		<table class="result">
+		<caption>등록된 정보들</caption>
+			<tr>
+				<th>page</th>
+				<th>name</th>
+				<th>number</th>
+				<th>home</th>
+				<th>question</th>
+				<th>checkbox</th>
+			</tr>
+		<% for(var i = 0; i < result.length; i++){ %> 
+			<tr>
+				<td><%= result[i].page %></td>
+				<td><%= result[i].name %></td>
+				<td><%= result[i].number %></td>
+				<td><%= result[i].home %></td>
+				<td><%= result[i].question %></td>
+				<td><%= result[i].checkbox %></td>
+			</tr>
+		<%}%>
+		</table>
+		<form onsubmit="return confirm('정말 삭제하시겠습니까? DB에서도 삭제됩니다.');" action = "/deleteUser">
+			<button class="delete-btn" type="submit">user 전체 삭제하기</button>
+		</form>
+	</div>
+</body>
+</html>

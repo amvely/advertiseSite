@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>louren 페이지</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="wrap">
+		<!-- 필요없으면 삭제 -->
+		<div class="header-con">
+			<!-- 제목 -->
+			<div class="title"><h2>제목</h2></div>
+			<!-- 부제목 -->
+			<div class="sub-title"><h5>부제목</h5></div>
+		</div>
+		<div class="img-con">
+			<!-- 이미지를 클릭하면 이동하고 싶은 url을 기재 -->
+			<a href="/page1">
+				<!-- 홍보 img 폴더에 넣고 '/img/파일명.확장자'로 이미지 기재 -->
+				<img src="/img/advertise.jpg" alt="img"> 
+			</a>
+		</div>
+		<div class="form-con">
+			<!-- ../addUser 뒤의 page를 만든 html 이름으로 바꿔주기 -->
+			<form action="../addUser/page2" method="post">
+				<table>
+					<tr>
+						<th>이름</th>
+						<td><input class="name" name="name" type="text" maxlength="20" placeholder="이름" required></td>
+					</tr>
+					<tr>
+						<th>연락처</th>
+						<td>
+							<input class="number" name="number1" type="text" maxlength="3" pattern="[0-9]{3}" placeholder="010" required> - 
+							<input class="number" name="number2" type="text" maxlength="4" pattern="[0-9]{4}" placeholder="1234" required> - 
+							<input class="number" name="number3" type="text" maxlength="4" pattern="[0-9]{4}" placeholder="5678" required>
+						</td>
+					</tr>
+					<tr>
+						<th>거주지</th>
+						<td>
+							<input class="home" name="home" type="text" maxlength="100" placeholder="거주지">
+						</td>
+					</tr>
+					<tr>
+						<th>문의사항</th>
+						<td>
+							<textarea class="question" name="question" maxlength="500" placeholder="문의사항"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th>* 개인정보 동의</th>
+						<td>
+							<input type="checkbox" name="allow" value="allow" checked>
+						</td>
+					</tr>
+				</table>
+				<input class="submit" type="submit" value="제 출  >">
+			</form>
+		</div>
+		<div class="footer">
+			<!-- 회사 정보 변경 -->
+			<p>상호명 : louren | 사업자 등록번호 : 508-15-121312</p>
+			<p>주소 : 서울특별시 금천구 가산디지털로12로 212, 1405-523호</p>
+			<p>TEL : 1811-2436</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var nums = document.getElementsByClassName('number');
+		nums[0].oninput= function(){
+			if(nums[0].value.length>=3){
+				nums[1].focus();
+			}
+		}
+		nums[1].oninput= function(){
+			if(nums[1].value.length>=4){
+				nums[2].focus();
+			}
+		}
+	</script>
+</body>
+</html>

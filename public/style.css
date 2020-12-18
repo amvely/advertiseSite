@@ -1,0 +1,175 @@
+@font-face {
+	font-family: 'barun';
+	src: url(./font/NanumBarunGothic-YetHangul.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'dohyeon';
+	src: url(./font/BMDOHYEON_ttf.ttf) format('truetype');
+}
+
+/* reset */
+*{
+	font-family: 'barun', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, body{
+	margin: 0;
+}
+html, body, #wrap{
+	width: 100%;
+}
+#wrap{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h2{
+	font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+h5{
+	font-size: 1rem;
+}
+input, textarea{
+	background-color: white;
+    border: 1px solid gray;
+}
+input:hover, input:active, input:focus, textarea:hover, textarea:active, textarea:focus{
+	outline: none;
+}
+table th{
+	text-align: start;
+}
+table tr{
+    height: 50px;
+}
+
+
+/* header */
+.header-con{
+    width: 50%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #bfbfbf;
+    margin: 30px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.header-con .sub-title{
+	text-align: center;
+	padding: 5px 20px;
+	border-radius: 1rem;
+}
+
+/* img */
+.img-con{
+	margin: 20px 0;
+	width: 640px;
+	overflow: hidden;
+}
+.img-con a{
+	width: 100%;
+}
+.img-con img{
+	width: 100%;
+}
+
+/* form */
+.form-con{
+	margin: 30px 0 30px;
+	width: 600px;
+    padding: 30px 20px 40px;
+	overflow: hidden;
+}
+.form-con form{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.form-con input{
+    padding: 7px;
+}
+.form-con table th{
+	width: 20%;
+}
+.form-con table td{
+	width: 80%;
+}
+.name{
+	width: 30%;
+}
+.number{
+	width: 10%;
+}
+.home{
+	width: 90%;
+}
+.question{
+	resize: none;
+	width: 90%;
+	height: 150px;
+	padding: 7px;
+}
+.submit{
+	font-family: 'dohyeon', 'barun', sans-serif;
+    margin: 30px auto 0;
+    padding: 25px 0!important;
+    font-size: 1.9rem;
+    border: none;
+    border-radius: 10px;
+	cursor: pointer;
+    width: 50%;
+    color: #1b1b1b;
+	box-shadow: 0 0 5px gray;
+}
+
+/* footer */
+.footer{
+	width:50%;
+	text-align: center;
+	border-top: 1px solid #bfbfbf;
+	font-size: 0.9rem;
+	margin: 10px 0;
+	padding-top: 20px;
+	color: rgb(85, 85, 85);
+}
+
+/* ejs */
+.result{
+	margin-top:20px;
+    width: 640px;
+}
+.result caption{
+	padding-bottom: 10px;
+}
+.result td{
+    width: 150px;
+    border: 1px solid gray;
+}
+.delete-btn{
+	font-size: 1.1rem;
+	padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+	cursor: pointer;
+	color: #1b1b1b;
+}
+
+
+/* 바꾸실 부분 */
+
+.header-con .sub-title{
+	/* 부제목 color */
+	background-color: rgb(243,189,189);
+}
+.form-con{
+	/* form 부분 color */
+	background-color: rgb(238, 209, 209);
+}
+.submit, .delete-btn{
+	/* 제출 버튼 color */
+	background-color: rgb(226, 106, 106);
+}
+.submit:hover, .delete-btn:hover{
+	/* 제출 버튼 위에 마우스 hover시 color */
+	background-color: rgb(248, 135, 135);
+}
