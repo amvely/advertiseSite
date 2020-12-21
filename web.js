@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 var pool = mysql.createPool({
 	host:'10.0.0.1',
 	user:'louren205c',
-	password:'louren',
+	password:'louren205',
 	database:'louren205c',
 	port:'3306'
 });
