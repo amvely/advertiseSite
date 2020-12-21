@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 // 요청 객체의 body에 요청 파라미터 넣기
-
+/*
 var pool = mysql.createPool({
 	host:'10.0.0.1',
 	user:'louren205c',
@@ -20,7 +20,7 @@ var pool = mysql.createPool({
 	database:'louren205c',
 	port:'3306'
 });
-/*
+*/
 var pool = mysql.createPool({
 	host: 'localhost',
 	user: 'root',
@@ -29,7 +29,7 @@ var pool = mysql.createPool({
 	port:'3306',
 	debug: false
 });
-*/
+
 
 pool.getConnection(function(err, conn){
 	if(err) throw err;
