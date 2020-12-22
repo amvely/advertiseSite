@@ -32,9 +32,10 @@
 
 			</a>
 		</div>
+		<iframe src="#" name="iframe" style="width:1px; height:1px; border:0; visibility:hidden;"></iframe>
 		<div class="form-con">
 			<!-- ../addUser 뒤의 page를 만든 ejs 이름으로 바꿔주기 -->
-			<form action="../addUser/page1" method="post">
+			<form action="../addUser/page1" onsubmit="return alert('제출이 완료 되었습니다!');" method="post" target="iframe">
 			<!-- ../addUser 뒤의 page를 만든 ejs 이름으로 바꿔주기 -->
 				<table>
 					<tr>
