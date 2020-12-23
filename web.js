@@ -21,6 +21,14 @@ var pool = mysql.createPool({
 	port:'3306'
 });
 
+var pool = mysql.createPool({
+	host:'127.0.0.1',
+	user:'root',
+	password:'1234',
+	database:'ad',
+	port:'3306'
+});
+
 pool.getConnection(function(err, conn){
 	if(err) throw err;
 	console.log('DB 연결 thread id : '+conn.threadId);
