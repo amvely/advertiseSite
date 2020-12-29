@@ -13,6 +13,8 @@
 }
 h1, h2, h3, h4, h5, h6, body{
 	margin: 0;
+    word-break: keep-all;
+    text-align: center;
 }
 html, body, #wrap{
 	width: 100%;
@@ -84,15 +86,19 @@ table tr{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+    align-items: center;
 }
 .form-con input{
     padding: 7px;
+    margin: 10px 0;
 }
 .form-con table th{
 	width: 20%;
 }
 .form-con table td{
-	width: 80%;
+	width: 100%;
+    height: 100%;
+    text-align: start;
 }
 .name{
 	width: 30%;
@@ -108,6 +114,7 @@ table tr{
 	width: 90%;
 	height: 150px;
 	padding: 7px;
+    margin: 10px 0;
 }
 .submit{
 	font-family: 'dohyeon', 'barun', sans-serif;
@@ -153,6 +160,44 @@ table tr{
 	cursor: pointer;
 	color: #1b1b1b;
 }
+
+/* mobile */
+
+@media screen and (max-width : 450px){
+	.header-con{
+		width: 90%;
+	}
+	.img-con{
+		width: 100%;
+	}
+	.form-con{
+		margin: 30px;
+		width: 90%;
+		padding: 30px 5% 40px;
+	}
+	.form-con table th{
+		width: 30%;
+	}
+	.form-con table td{
+		width: 100%;
+	}
+	.name{
+		width: 90%;
+	}
+	.number{
+		width: 18%;
+	}
+	.footer{
+		width: 90%;
+	}
+	.result{
+		width: 100%;
+		overflow-x: scroll;
+	}
+}
+
+
+
 
 
 /* 바꾸실 부분 */

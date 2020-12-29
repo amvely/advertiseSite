@@ -16,20 +16,10 @@ app.use(bodyParser.json());
 var pool = mysql.createPool({
 	host:'10.0.0.1',
 	user:'louren205c',
-	password:'louren',
+	password:'louren205',
 	database:'louren205c',
 	port:'3306'
 });
-/*
-var pool = mysql.createPool({
-	host: 'localhost',
-	user: 'root',
-	password:'1234',
-	database:'ad',
-	port:'3306',
-	debug: false
-});
-*/
 
 pool.getConnection(function(err, conn){
 	if(err) throw err;
@@ -160,7 +150,7 @@ app.get('/deleteUser', function(req, res){
 	res.end();
 })
 
-
+/* admin 페이지를 없애시려면 아래의 코드를 지우시면 됩니다 */
 app.get('/lourenadminsecret', function(req, res){
 	// admin page 띄우기
 	popUser(function(err, result){
@@ -187,14 +177,16 @@ app.get('/lourenadminsecret', function(req, res){
 		})
 	});
 })
+/* admin 페이지를 없애시려면 위의 코드를 지우시면 됩니다 */
 
-// 이곳에 js 추가하시면 됩니다.
-// 이미 만들어둔 app.get 부분 복사 후,
-// '/page1' 부분을 만들어둔 html 페이지 이름으로 변경
-// 아래의 '/public/page1.html' 부분도 변경
+
+/* 페이지 추가하는법! */
+/* 1. views 폴더에서 page1.ejs를 복사한 후, 내용을 바꾼다. */
+/* 2. 아래의 app.get 부분을 전체 복사한 후 붙여넣기 한다. */
+/* 3. page1이라고 되어있는 곳을 새로 생성한 ejs 파일 명으로 바꿔준다 */
 
 app.get('/page1', function(req, res){
-	// page1.html 띄우기
+	// page1.ejs 띄우기
 	req.app.render('page1', function(err, html){
 		if(err){
 			console.error('뷰 렌더링 중 오류 : '+err.stack);
@@ -205,7 +197,7 @@ app.get('/page1', function(req, res){
 })
 
 app.get('/page2', function(req, res){
-	// page2.html 띄우기
+	// page2.ejs 띄우기
 	req.app.render('page2', function(err, html){
 		if(err){
 			console.error('뷰 렌더링 중 오류 : '+err.stack);
