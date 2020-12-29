@@ -207,6 +207,16 @@ app.get('/page2', function(req, res){
 	})
 })
 
+app.get('/page3', function(req, res){
+	// page3.ejs 띄우기
+	req.app.render('page3', function(err, html){
+		if(err){
+			console.error('뷰 렌더링 중 오류 : '+err.stack);
+			return;
+		}
+		res.end(html);
+	})
+})
 
 
 
